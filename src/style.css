@@ -64,8 +64,8 @@ h2 {
 .atmos {
   margin-top: 30px;
 }
-.characteristic {
-  font-size: 40px;
+#condition {
+  font-size: 35px;
 }
 .date {
   background: #f2ecca;

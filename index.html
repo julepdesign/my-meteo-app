@@ -43,19 +43,22 @@
         </div>
         <div class="details">
           <div class="infos">
-            <div class="characteristic">☼ Sunny</div>
+            <p id="condition">
+              <span id="icon-weather"> ☼ </span
+              ><span id="description">Sunny</span>
+            </p>
             <br />
             <div class="atmos">
-              humidity // 65% <br />
-              Wind // 10km/h
+              humidity // <span id="humidity"></span> <br />
+              Wind // <span id="speed"></span>
             </div>
           </div>
           <div class="date">
             <div class="clock">⏱︎</div>
             <br />
-            Tuesday <br />
-            14:22 <br />
-            2025
+            <div id="day"></div>
+            <div id="time"></div>
+            <div id="year"></div>
           </div>
         </div>
       </main>
