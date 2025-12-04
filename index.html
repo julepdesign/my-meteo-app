@@ -3,50 +3,70 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Syne:wght@400..800&display=swap"
+      rel="stylesheet"
+    />
     <title>My Meteo App</title>
   </head>
   <body>
-    <header>
-      <form>
-        <input type="search" placeholder="Enter a city..." required />
-        <input type="submit" value="Search" />
-      </form>
-    </header>
-    <main>
-      <div>
-        <h1>16ºC</h1>
-        <h2>Málaga</h2>
-      </div>
-      <div>
+    <div class="meteo-app">
+      <header>
+        <form class="search-form" id="search-form">
+          <input
+            type="search"
+            placeholder="Enter a city..."
+            required
+            class="search-form-input"
+          />
+          <input type="submit" value="Search" class="search-form-button" />
+        </form>
+      </header>
+      <main>
         <div>
-          <p>
-            Sunny
-            <br />
-            humidity // 65% <br />
-            Wind // 10km/h
-          </p>
+          <h1>16ºC</h1>
+          <h2>Málaga</h2>
         </div>
-        <div>
-          <p>
+        <div class="details">
+          <div class="infos">
+            <div class="characteristic">☼ Sunny</div>
+            <br />
+            <div class="atmos">
+              humidity // 65% <br />
+              Wind // 10km/h
+            </div>
+          </div>
+          <div class="date">
+            <div class="clock">⏱︎</div>
+            <br />
             Tuesday <br />
             14:22 <br />
             2025
-          </p>
+          </div>
         </div>
-      </div>
-    </main>
-
-    <footer>
-      Coded with mucho amor 💙 by
-      <a href="https://github.com/julepdesign" target="_blank">JULEPDESIGN</a>,
-      available open-sourced on
-      <a href="https://github.com/julepdesign/my-meteo-app" target="_blank">
-        Github</a
-      >
-      & hosted on
-      <a href="https://mymeteoapp-julep.netlify.app/" target="_blank">
-        Netlify</a
-      >
-    </footer>
+      </main>
+      <footer>
+        Coded with mucho amor 💙 by
+        <a href="https://github.com/julepdesign" target="_blank">JULEPDESIGN</a
+        >, available open-sourced on
+        <a href="https://github.com/julepdesign/my-meteo-app" target="_blank">
+          Github</a
+        >
+        & hosted on
+        <a href="https://mymeteoapp-julep.netlify.app/" target="_blank">
+          Netlify</a
+        >
+      </footer>
+    </div>
   </body>
+  <script src="src/index.js"></script>
 </html>
