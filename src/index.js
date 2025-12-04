@@ -22,14 +22,17 @@ function refreshWeather(response) {
   let minutes = date.getMinutes().toString().padStart(2, "0");
   let year = date.getFullYear();
 
+  let iconElement = document.querySelector("#icon-weather");
+
   temperatureElement.innerHTML = Math.round(temperature);
   cityElement.innerHTML = response.data.city;
   descriptionElement.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
   windElement.innerHTML = `${response.data.wind.speed}km/h`;
   dayElement.innerHTML = weekDays[date.getDay()];
-  timeElement.innerHTML = `${date.getHours()}:${date.getMinutes()}`;
+  timeElement.innerHTML = `${hours}:${minutes}`;
   yearElement.innerHTML = year;
+  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />`;
 }
 function searchCity(city) {
   let apiKey = "c5a77b10o404035t8533ef4bf02afcfc";

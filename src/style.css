@@ -64,8 +64,11 @@ h2 {
 .atmos {
   margin-top: 30px;
 }
-#condition {
+#description {
   font-size: 35px;
+}
+#icon-weather {
+  margin-top: -20px;
 }
 .date {
   background: #f2ecca;
