@@ -8,7 +8,7 @@ function refreshWeather(response) {
   let dayElement = document.querySelector("#day");
   let timeElement = document.querySelector("#time");
   let yearElement = document.querySelector("#year");
-  let date = new Date(response.data.time * 1000);
+  let date = new Date();
   let weekDays = [
     "Sunday",
     "Monday",
