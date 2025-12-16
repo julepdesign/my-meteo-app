@@ -1,12 +1,18 @@
 body {
-  background: white;
+  background: url("images/gradient.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  min-height: 100vh;
 }
 .meteo-app {
-  background: #00466b;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(20px);
   max-width: 900px;
   margin: 30px auto;
   padding: 40px;
-  box-shadow: 0px 0px 30px rgba(77, 76, 79, 0.5);
+  box-shadow: 0px 0px 30px rgba(97, 97, 97, 0.3);
   border-radius: 30px;
 }
 .search-form {
@@ -37,19 +43,20 @@ body {
   width: 28%;
 }
 .search-form-button:hover {
-  background: #fed905;
+  background: #002539;
+  color: white;
 }
 h1 {
   font-family: "syne";
   font-size: 70px;
-  color: white;
+  color: #002539;
   margin-bottom: -25px;
   margin-left: 40px;
 }
 h2 {
   font-family: "syne";
   font-size: 25px;
-  color: white;
+  color: #002539;
   text-transform: uppercase;
   margin-left: 40px;
   margin-bottom: 30px;
@@ -60,8 +67,8 @@ h2 {
   column-gap: 60px;
   font-family: "Geist Mono";
   text-transform: uppercase;
-  background: #fed905;
-  color: #002539;
+  background: #002539;
+  color: white;
   padding: 40px;
   border-radius: 20px;
   position: relative;
@@ -85,7 +92,7 @@ h2 {
 }
 
 .date {
-  background: url("images/motion-graphic-pixel.gif");
+  background: url("images/texture-pattern.gif");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -104,7 +111,8 @@ h2 {
 }
 
 .weather-forecast {
-  background: #fffce9;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(20px);
   margin-top: -30px;
   padding: 50px;
   z-index: 1;
@@ -154,7 +162,13 @@ footer {
 }
 a {
   text-transform: uppercase;
-  color: #fed905;
+  color: #002539;
+  font-weight: 600;
   text-align: center;
   margin: 20px auto;
+  transition: all 0.5s ease;
+}
+a:hover {
+  color: #eb2ea2;
+  text-decoration: none;
 }
