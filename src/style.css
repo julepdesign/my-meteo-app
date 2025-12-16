@@ -3,10 +3,10 @@ body {
 }
 .meteo-app {
   background: #00466b;
-  max-width: 700px;
-  margin: 50px auto;
-  padding: 60px;
-  box-shadow: 0px 0px 40px rgba(77, 76, 79, 0.5);
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 40px;
+  box-shadow: 0px 0px 30px rgba(77, 76, 79, 0.5);
   border-radius: 30px;
 }
 .search-form {
@@ -20,7 +20,7 @@ body {
   text-transform: uppercase;
   font-size: 14px;
   padding: 20px 40px;
-  width: 65%;
+  width: 70%;
 }
 .search-form-button {
   background: white;
@@ -29,26 +29,30 @@ body {
   color: #002539;
   font-family: "syne";
   font-weight: 700;
-  font-size: 16px;
+  font-size: 14px;
   margin-left: 10px;
   text-align: center;
   text-transform: uppercase;
   padding: 20px 20px;
-  width: 30%;
+  width: 28%;
+}
+.search-form-button:hover {
+  background: #fed905;
 }
 h1 {
   font-family: "syne";
-  font-size: 80px;
+  font-size: 70px;
   color: white;
   margin-bottom: -25px;
   margin-left: 40px;
 }
 h2 {
   font-family: "syne";
-  font-size: 40px;
+  font-size: 25px;
   color: white;
   text-transform: uppercase;
   margin-left: 40px;
+  margin-bottom: 30px;
 }
 .details {
   display: flex;
@@ -59,36 +63,89 @@ h2 {
   background: #fed905;
   color: #002539;
   padding: 40px;
-  border-radius: 30px;
+  border-radius: 20px;
+  position: relative;
+  z-index: 10;
 }
-.atmos {
-  margin-top: 30px;
+#condition {
+  display: flex;
+  align-items: flex-start;
+  gap: 100px;
 }
 #description {
   font-size: 35px;
 }
 #icon-weather {
-  margin-top: -20px;
+  margin-top: -30px;
+  width: 40px;
+  height: 40px;
 }
+.atmos {
+  margin-left: 35%;
+}
+
 .date {
   background: url("images/motion-graphic-pixel.gif");
-  position: relative;
-  z-index: 1;
-  max-width: 50%;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   color: #002539;
-  padding: 40px 30px 40px;
-  border-radius: 20px;
+  font-size: 12px;
   font-weight: 700;
+  position: relative;
+  z-index: 1;
 }
-.clock {
-  font-size: 30px;
+
+.weather-forecast {
+  background: #fffce9;
+  margin-top: -30px;
+  padding: 50px;
+  z-index: 1;
+  position: relative;
+  border-radius: 0 0 30px 30px;
+  display: flex;
+  justify-content: space-around;
+}
+.weather-forecast-date {
   text-align: center;
+  font-family: "Geist mono";
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #3d5562;
+  line-height: 20px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.weather-forecast-icon {
+  font-size: 38px;
+  text-align: center;
+}
+.weather-forecast-temperatures {
+  font-family: "Syne";
+  font-size: 16px;
+  text-align: center;
+  color: #3d5562;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+.weather-forecast-temperature {
+  padding: 0 10px;
+}
+strong {
+  color: #00466b;
 }
 footer {
   font-family: "geist Mono";
+
   margin-top: 40px;
   color: white;
   text-transform: uppercase;
