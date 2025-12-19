@@ -29,7 +29,8 @@ body {
   width: 70%;
 }
 .search-form-button {
-  background: white;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(20px);
   border: none;
   border-radius: 10px;
   color: #002539;
@@ -41,10 +42,11 @@ body {
   text-transform: uppercase;
   padding: 20px 20px;
   width: 28%;
+  transition: all 0.5s ease;
 }
 .search-form-button:hover {
-  background: #002539;
-  color: white;
+  background: white;
+  color: #002539;
 }
 h1 {
   font-family: "syne";
