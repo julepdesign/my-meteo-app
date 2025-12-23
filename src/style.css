@@ -90,7 +90,7 @@ h2 {
   height: 40px;
 }
 .atmos {
-  margin-left: 35%;
+  margin-left: 40%;
 }
 
 .date {
@@ -126,29 +126,32 @@ h2 {
 .weather-forecast-date {
   text-align: center;
   font-family: "Geist mono";
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
-  color: #3d5562;
+  color: #90a6b2;
   line-height: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   margin-top: 10px;
 }
 .weather-forecast-icon {
-  font-size: 38px;
-  text-align: center;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  display: block;
+  margin: 0 auto;
 }
 .weather-forecast-temperatures {
   font-family: "Syne";
-  font-size: 16px;
+  font-size: 14px;
   text-align: center;
-  color: #3d5562;
+  color: #90a6b2;
   margin-top: 10px;
   display: flex;
   justify-content: center;
 }
 .weather-forecast-temperature {
-  padding: 0 10px;
+  padding: 0 5px;
 }
 strong {
   color: #00466b;
