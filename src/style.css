@@ -1,38 +1,47 @@
 body {
-  background: url("images/gradient.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: url("images/gradient-dark.jpg") center / cover no-repeat;
   margin: 0;
   min-height: 100vh;
+  font-family: "Syne", sans-serif;
 }
 .meteo-app {
-  background: rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(20px);
   max-width: 900px;
   margin: 30px auto;
-  padding: 40px;
-  box-shadow: 0px 0px 30px rgba(97, 97, 97, 0.3);
-  border-radius: 30px;
+  padding: 28px;
+
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 36px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
 }
 .search-form {
-  align-items: center;
+  display: flex;
+  gap: 12px;
+  margin-bottom: 30px;
 }
 .search-form-input {
-  background: white;
-  border-radius: 10px;
+  flex: 1;
+  padding: 20px 36px;
+
+  border-radius: 40px;
   border: none;
+
   font-family: "Geist Mono";
-  text-transform: uppercase;
   font-size: 14px;
-  padding: 20px 40px;
-  width: 70%;
+  text-transform: uppercase;
+  color: #121111;
+}
+
+input::placeholder {
+  color: #121111;
 }
 .search-form-button {
+  padding: 18px 28px;
+  width: auto;
   background: rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(20px);
   border: none;
-  border-radius: 10px;
+  border-radius: 40px;
   color: #002539;
   font-family: "syne";
   font-weight: 700;
@@ -46,129 +55,147 @@ body {
 }
 .search-form-button:hover {
   background: white;
-  color: #002539;
+  color: #020000;
+}
+.weather-card {
+  background: #121111;
+  color: #fffce9;
+  border-radius: 24px;
+  padding: 32px;
+}
+.current-weather {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
 }
 h1 {
-  font-family: "syne";
+  font-family: "Syne";
+  background: linear-gradient(to left, #d1a79d, #adc0c8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
   font-size: 70px;
-  color: #002539;
-  margin-bottom: -25px;
-  margin-left: 40px;
+  margin: 0;
 }
 h2 {
   font-family: "syne";
-  font-size: 25px;
-  color: #002539;
+  font-size: 22px;
+  color: #fffce9;
   text-transform: uppercase;
-  margin-left: 40px;
-  margin-bottom: 30px;
+  letter-spacing: 0.05em;
+  margin-top: 8px;
 }
-.details {
-  display: flex;
-  justify-content: space-between;
-  column-gap: 60px;
+.date {
+  margin-top: 20px;
   font-family: "Geist Mono";
   text-transform: uppercase;
-  background: #002539;
-  color: white;
-  padding: 40px;
-  border-radius: 20px;
-  position: relative;
-  z-index: 10;
+  font-size: 13px;
+  opacity: 0.8;
+  line-height: 1.6;
 }
-#condition {
-  display: flex;
-  align-items: flex-start;
-  gap: 100px;
-}
-#description {
-  font-size: 35px;
-}
-#icon-weather {
-  margin-top: -30px;
-  width: 40px;
-  height: 40px;
-}
-.atmos {
-  margin-left: 40%;
+.current-right {
+  text-align: right;
 }
 
-.date {
-  background: url("images/texture-pattern.gif");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: #002539;
-  font-size: 12px;
-  font-weight: 700;
-  position: relative;
-  z-index: 1;
+.condition {
+  font-size: 26px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+#icon-weather {
+  width: 40px;
+  height: 40px;
+  vertical-align: middle;
+  margin-bottom: 50px;
+}
+
+.atmos {
+  font-family: "Geist Mono";
+  text-transform: uppercase;
+  font-size: 13px;
+  line-height: 1.6;
+  opacity: 0.85;
+}
+
+#description {
+  font-size: 35px;
+  font-family: "Geist Mono";
+  text-transform: uppercase;
+}
+
+.forecast-wrapper {
+  margin-top: 30px;
+  background: transparent;
 }
 
 .weather-forecast {
-  background: rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(20px);
-  margin-top: -30px;
-  padding: 50px;
-  z-index: 1;
-  position: relative;
-  border-radius: 0 0 30px 30px;
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(5, 0.5fr);
+  gap: 16px;
 }
+.weather-forecast > div {
+  background: rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(14px);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25);
+  aspect-ratio: 4/5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 22px 14px;
+}
+
 .weather-forecast-date {
   text-align: center;
   font-family: "Geist mono";
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
-  color: #90a6b2;
+  color: #fffce9;
   line-height: 20px;
   margin-bottom: 5px;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 .weather-forecast-icon {
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   padding: 10px;
   display: block;
   margin: 0 auto;
 }
 .weather-forecast-temperatures {
-  font-family: "Syne";
+  font-family: "Geist Mono";
   font-size: 14px;
   text-align: center;
-  color: #90a6b2;
-  margin-top: 10px;
+  color: #fffce9;
+  margin-top: 5px;
   display: flex;
   justify-content: center;
 }
 .weather-forecast-temperature {
   padding: 0 5px;
 }
+.weather-forecast > div {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  padding: 16px;
+  text-align: center;
+}
 strong {
-  color: #00466b;
+  color: #fffce9;
 }
 footer {
   font-family: "geist Mono";
-
   margin-top: 40px;
-  color: white;
-  text-transform: uppercase;
+  color: #fffce9;
   font-size: 11px;
   text-align: center;
 }
 a {
-  text-transform: uppercase;
-  color: #002539;
-  font-weight: 600;
+  font-style: normal;
+  color: #fffce9;
+  border-radius: 10px;
+  padding: 2px;
+  font-weight: 900;
   text-align: center;
   margin: 20px auto;
   transition: all 0.5s ease;
@@ -176,4 +203,83 @@ a {
 a:hover {
   color: #eb2ea2;
   text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .details {
+    align-items: center;
+    flex-direction: row;
+    gap: 30px;
+    padding: 25px;
+  }
+  .search-form {
+    flex-direction: column;
+  }
+  .search-form-input,
+  .search-form-button {
+    width: 100%;
+    margin: 0;
+  }
+  .search-form-button {
+    margin-top: 10px;
+  }
+  h1 {
+    font-size: 3rem;
+    margin-left: 0;
+    text-align: center;
+  }
+  h2 {
+    font-size: 20px;
+    margin-left: 0;
+    text-align: center;
+  }
+  .current-weather {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 24px;
+  }
+  .current-right {
+    text-align: center;
+  }
+  .date {
+    width: auto;
+    height: auto;
+    font-size: 10px;
+    line-height: 1.4;
+    margin: 16px auto 0;
+    text-align: center;
+  }
+  .condition {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  #icon-weather {
+    margin-left: -60px;
+    margin-top: -40px;
+    margin-bottom: 40px;
+  }
+
+  #description {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .atmos {
+    text-align: center;
+    margin-top: 8px;
+  }
+  .weather-forecast {
+    grid-template-columns: repeat(2, 1fr);
+    overflow-x: auto;
+    gap: 20px;
+    padding: 30 20px;
+  }
+
+  .weather-forecast > div {
+    aspect-ratio: auto;
+  }
 }

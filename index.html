@@ -33,39 +33,39 @@
           <input type="submit" value="Search" class="search-form-button" />
         </form>
       </header>
-      <main>
-        <div>
-          <h1>
-            <span id="temperature"></span>
-            ºC
-          </h1>
-          <h2 id="city"></h2>
-        </div>
+      <main class="weather-card">
+        <div class="current-weather">
+          <div class="current-left">
+            <h1><span id="temperature"></span>°C</h1>
+            <h2 id="city"></h2>
 
-        <div class="details">
-          <div class="infos">
-            <span id="condition">
-              <span id="icon-weather"></span>
-              <span id="description"></span>
-            </span>
-            <br />
-            <div class="atmos">
-              humidity // <span id="humidity"></span> <br />
-              Wind // <span id="speed"></span>
+            <div class="date">
+              <div id="day"></div>
+              <div id="time"></div>
+              <div id="year"></div>
             </div>
           </div>
 
-          <div class="date">
-            <div id="day"></div>
-            <div id="time"></div>
-            <div id="year"></div>
+          <div class="current-right">
+            <div class="condition">
+              <div id="icon-weather"></div>
+              <div id="description"></div>
+            </div>
+
+            <div class="atmos">
+              HUMIDITY // <span id="humidity"></span> <br />
+              WIND // <span id="speed"></span> km/h
+            </div>
           </div>
         </div>
-        <div class="weather-forecast" id="forecast"></div>
       </main>
+      <div class="forecast-wrapper">
+        <div class="weather-forecast" id="forecast"></div>
+      </div>
+
       <footer>
         Designed by
-        <a href="https://julepdesign.com" target="_blank">JULEPDESIGN.COM</a
+        <a href="https://julepdesign.com" target="_blank">julepdesign.com</a
         ><br />
         Coded with mucho amor 🩷 by
         <a href="https://github.com/julepdesign" target="_blank"> julepdesign</a
@@ -74,8 +74,8 @@
           Github</a
         >
         & hosted on
-        <a href="https://mymeteoapp-julep.netlify.app/" target="_blank">
-          Netlify</a
+        <a href="https://my-meteo-app-navy.vercel.app/" target="_blank">
+          Vercel</a
         >
       </footer>
     </div>
